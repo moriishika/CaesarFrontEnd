@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin : 0;
+  padding : 0;
+}
+
+.flex{
+  display : flex;
+}
+
+.flex-col{
+  flex-direction : column;
+}
+
+.hor-center{
+  justify-content: center;
+}
+
+.ver-center{
+  align-items: center; 
+}
+
+.center-text{
+  text-align : center;
+  overflow-wrap: break-word;
+  padding: 3% 10% 3% 10%;
+}

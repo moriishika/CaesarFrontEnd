@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+  <style>
+    html,
+    body,
+    pre,
+    code,
+    kbd,
+    samp,
+    p {
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="">
+  <form id="form">
+    <div>
+      <div class="flex hor-center ver-center">
+        <img src="https://pics.me.me/caesar-cipher-hash-hash-with-salt-b%D1%81rypt-quantum-encryption-has-63629676.png"
+          height="500px" />
+      </div>
+      <p id="message" class="text-center"></p>
+      <div class="flex hor-center">
+        <input type="number" placeholder="Input shift number. Ex : 3 or -3" aria-label="Shift Number" id="shiftNumber">
+        <input type="text" placeholder="Input the text you want to encrypt" aria-label="Text" id="encryptText">
+        <button type="submit" class="nes-btn is-primary" id="button">Encrypt!</button>
+    </div>
+    <div>
+      <p id="result" class="container text-center"></p>
+    </div>
+    </div>
+  </form>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
