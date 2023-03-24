@@ -1,9 +1,9 @@
 const formElement = document.getElementById("form");
-const shiftNumber = document.getElementById("shiftNumber");
 const text = document.getElementById("encryptText");
 const messageBox = document.getElementById("message");
 const resultBox = document.getElementById("result");
 const button = document.getElementById("button");
+const selectMode = document.getElementById("selectMode");
 let isEncryption = true;
 
 formElement.addEventListener("submit", async (e) => {
@@ -11,6 +11,7 @@ formElement.addEventListener("submit", async (e) => {
   const formData = new FormData();
   formData.append("shiftNumber", shiftNumber.value);
   formData.append("text", text.value);
+  formData.append("method", isEncryption)
 
   if (!shiftNumber.value || !text.value) {
     messageBox.innerHTML = "Shift number or text input cannot be emptied";
@@ -30,16 +31,15 @@ formElement.addEventListener("submit", async (e) => {
   resultBox.innerHTML = `This is the ${isEncryption ? 'encrypted' : 'decrypted'} text: ${data.result[0]}`
   resultBox.style.overflowWrap = "break-word"
   resultBox.style.padding = "3% 10% 3% 10%"
-  console.log(data)
 });
 
-shiftNumber.addEventListener("input", (e) =>{
-  if(parseInt(e.target.value) > 0){
+
+selectMode.addEventListener("change", ({target}) => {
+  if(isEncryption){
     isEncryption = true
     button.textContent = "Encrypt!"
   }else{
     isEncryption = false
     button.textContent = "Decrypt!"
   }  
-  console.log(isEncryption)
-});
+})  
